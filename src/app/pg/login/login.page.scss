@@ -1,0 +1,54 @@
+
+
+.corpo{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.corpo h1{
+    color: #BF4980;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.inputLogin{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+ion-item{
+    --border-color: #BF4980;
+    --border-width: 2px;
+    color: #BF4980;
+    width: 340px;
+    margin: 0 auto;
+}
+
+ion-input{
+    height: 50px;
+    width: 340px;
+    margin: 0 auto;
+}
+
+ion-button{
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    height: 50px;
+    width: 340px;
+    margin: 10px auto;
+}
+
+p{
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: -0.015em;
+    color: #6F6F6F;
+}

@@ -1,0 +1,118 @@
+<ion-content class="corpo">
+  <!-- <ion-row class="homeTitle">
+    <ion-col size="12">
+      <ion-title>Seja bem-vindo!</ion-title>
+    </ion-col>
+  </ion-row> -->
+
+  <ion-slides [options]="slide" class="ion-margin" pager="false">
+    <ion-slide>
+      <ion-card class="cardBanner">
+        <img class="imgBanner" src="assets/banner01.png">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="cardBanner">
+        <img class="imgBanner" src="assets/banner02.png">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="cardBanner">
+        <img class="imgBanner" src="assets/banner03.png">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="cardBanner">
+        <img class="imgBanner" src="assets/banner04.png">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="cardBanner">
+        <img class="imgBanner" src="assets/banner01.png">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-row class="categorias">
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/categoria01.png" alt="Categoria 01"></ion-img>
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/categoria01.png" alt="Categoria 02"></ion-img>
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/categoria01.png" alt="Categoria 03"></ion-img>
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/categoria01.png" alt="Categoria 04"></ion-img>
+      </a>
+    </ion-col> 
+  </ion-row>
+
+  <ion-row class="conteudo01">
+    <ion-col>
+      <ion-text>
+        <h2>Titulo</h2>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text>
+        <a href="tabs/pg/lista-produto">
+        <h3>Ver mais</h3>
+        </a>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-card>
+      <img src="../../../assets/card01.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Lorem Ipsum</ion-card-subtitle>
+        <ion-card-title color="primary">Lorem Ipsum</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quam! Exercitationem at est necessitatibus recusandae.
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img src="../../../assets/card02.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Lorem Ipsum</ion-card-subtitle>
+        <ion-card-title color="primary">Lorem Ipsum</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quam! Exercitationem at est necessitatibus recusandae.
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+
+  <video controls autoplay loop width="100%" class="videoHome">
+    <source src="../../../assets/video.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Seu dispositivo não suporta o formato de video.
+  </video>
+
+  <ion-row>
+    <ion-slides pager="false" [options]="slideProduto" class="ion-margin">
+      <ion-slide *ngFor="let produto of produtos">
+        <ion-card>
+          <img src="{{ this.servidorUrl.pegarUrl() + this.produto.fotoProduto1 }}">
+          <ion-card-header>
+            <ion-card-subtitle>Destaques</ion-card-subtitle>
+            <ion-card-title color="primary">{{ produto.nomeProduto }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>{{ produto.descProduto }}</ion-card-content>
+          <ion-button href="/tabs/pg/detalhe/{{ produto.idProduto}}" expand="full">Encomende</ion-button>
+        </ion-card>
+      </ion-slide>
+    </ion-slides> 
+  </ion-row>
+</ion-content>

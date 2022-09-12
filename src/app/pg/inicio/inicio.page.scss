@@ -1,0 +1,31 @@
+.corpo{
+    --background: #fff url(../../../assets/background01.png) no-repeat center center / cover;
+    text-align: center;
+}
+
+ion-row{
+    flex-direction: column;
+    margin-top: 170%;
+}
+
+ion-button{
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    height: 50px;
+    width: 170px;
+    margin: 10px auto;
+}
+
+.inputCad{
+    box-sizing: border-box;
+    --background: rgba(255, 255, 255, 0);
+    color: #BF4980;
+    border: 2px solid #BF4980;
+
+}

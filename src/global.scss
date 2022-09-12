@@ -24,3 +24,60 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.app-alerta .alert-wrapper {
+    background: rgba(242, 242, 242, 0.9);
+    border-radius: 15px;
+    .alert-head {
+        text-align: center;
+        color: #000;
+        margin: 5px;
+        padding: 10px 5px 5px;
+
+        h2 {
+            font-family: 'Comfortaa';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: -0.408px;
+            color: #000000;
+        }
+    }
+    .alert-message {
+        font-family: "Comfortaa";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: -0.078px;
+        color: #000;
+        margin: 0 5px 5px;
+        padding: 0 5px 5px;
+    }
+    .alert-button-group {
+        justify-content: center;
+        width: 100%;
+
+        font-family: "Comfortaa";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.408px;
+        margin: 0;
+        padding: 0;
+
+        .alert-button-inner.sc-ion-alert-md{
+            justify-content: center;
+        }
+        button {
+            border-top: 1px solid rgba(60, 60, 67, 0.36);
+            width: 100%;
+            margin: 0;
+            color: #007AFF;
+        }
+    }
+}

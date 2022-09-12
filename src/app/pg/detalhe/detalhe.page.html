@@ -1,0 +1,48 @@
+<ion-content class="corpo">
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/pg/lista-produto" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-row>
+      <ion-slides pager="true"> <!--Começo ionic slide-->
+        <ion-slide> <!--Slide 01-->
+          <ion-img src="{{ this.servidorUrl.pegarUrl() + this.dados[0]?.fotoProduto1 }}" alt="{{ this.dados[0]?.nomeProduto }}"></ion-img>
+        </ion-slide> <!--Fim slide 01-->
+    
+        <ion-slide> <!--Slide 02-->
+          <ion-img src="#" alt="{{ this.dados[0]?.nomeProduto }}"></ion-img>
+        </ion-slide> <!--Fim slide 02-->
+    
+        <ion-slide> <!--Slide 03-->
+          <ion-img src="#" alt="{{ this.dados[0]?.nomeProduto }}"></ion-img>
+        </ion-slide> <!--Fim slide 03-->
+
+        <ion-slide> <!--Slide 04-->
+          <ion-img src="#" alt="{{ this.dados[0]?.nomeProduto }}"></ion-img>
+        </ion-slide> <!--Fim slide 04-->
+      </ion-slides> <!--Fim ionic slide-->
+  </ion-row>
+
+  <ion-row class="conteudoDetalhe">
+    <ion-col class="texto" size="12">
+      <ion-title>{{ this.dados[0]?.nomeProduto }}</ion-title>
+      <h2>R${{ this.dados[0]?.valorProduto }}</h2>
+      <h4>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-outline"></ion-icon>
+      </h4>
+      <p>
+        {{ this.dados[0]?.descProduto }}      
+      </p>
+    </ion-col>
+    <ion-col size="12">
+      <a href="/tabs/pg/reserva"><ion-button expand="block"><ion-icon name="cart"></ion-icon></ion-button></a>
+    </ion-col>
+  </ion-row>
+</ion-content>

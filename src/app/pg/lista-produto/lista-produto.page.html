@@ -1,0 +1,32 @@
+<ion-content class="corpo">
+  <ion-searchbar placeholder="Pesquisar produtos" (ionInput)="getItems($event)"></ion-searchbar>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item class="produtoItem" *ngFor="let produto of produtoItem">
+              <ion-thumbnail slot="start">
+                <img src="{{ this.servidorUrl.pegarUrl() + this.produto.fotoProduto1 }}" alt="Thumb">
+              </ion-thumbnail>
+
+              <ion-label>
+                <h2>{{ produto.nomeProduto }}</h2>
+                <h3>{{ produto.descProduto }}</h3>
+                <h4>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </h4>
+                <a href="/tabs/pg/detalhe/{{ produto.idProduto}}"><button id="btn">Detalhes</button></a>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

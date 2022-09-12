@@ -1,0 +1,78 @@
+<ion-content>
+  <ion-img src="../../../assets/FundoImg.png"></ion-img>
+
+  <div id="corpo">
+    <ion-segment [(ngModel)]="type"> <!--(ionChange)="segmentChanged($event)" -->
+      <ion-segment-button value="log">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="cad">
+        <ion-label>Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ng-container [ngSwitch]="type">
+      <ion-row *ngSwitchCase="'log'"> <!--*ngFor="segmentChanged == 'log'"-->
+        <ion-col size="12">
+          <ion-item>
+            <ion-icon name="mail" slot="end"></ion-icon>
+            <ion-input type="email" placeholder="Email:" autofocus="true" inputmode="email" [(ngModel)]='email'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / autofocus = mostra esse campo em ativo primeiro, em destaque / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-icon name="lock-closed" slot="end"></ion-icon>
+            <ion-input type="password" placeholder="Senha:" inputmode="senha" [(ngModel)]='senha'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="Logar()">Login</ion-button> <!--Criando o metodo logar em click-->
+        </ion-col>
+      </ion-row>
+
+    <!--///////////////////////////////////////////////-->
+      <ion-row *ngSwitchCase="'cad'"> <!--*ngFor="segmentChanged == 'cad'"-->
+        <!-- <ion-buttons>
+          <ion-back-button icon="chevron-back-outline" defaultHref="/tabs/pg/inicio"></ion-back-button>
+        </ion-buttons> -->
+        <form [formGroup]="cadastro" (ngSubmit)="cadCliente()">
+          <ion-col size="12">
+
+          </ion-col>
+          <ion-col size="12"class="inputLogin">
+            <ion-item>
+              <ion-icon name="person" slot="end"></ion-icon>
+              <ion-input type="text" placeholder="Nome:" autofocus="true" inputmode="nome" formControlName="nome" [(ngModel)]='nome'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / autofocus = mostra esse campo em ativo primeiro, em destaque / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+              <ion-item>
+                <ion-icon name="mail" slot="end"></ion-icon>
+                <ion-input type="email" placeholder="Email:" inputmode="email" formControlName="email"  [(ngModel)]='email'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / autofocus = mostra esse campo em ativo primeiro, em destaque / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+              </ion-item>
+            </ion-col>
+          <ion-col size="12">
+            <ion-item>
+              <ion-icon name="lock-closed" slot="end"></ion-icon>
+              <ion-input type="password" placeholder="Senha:" inputmode="senha" formControlName="senha" [(ngModel)]='senha'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+            </ion-item>
+          </ion-col>
+        <!--  <ion-col size="12">
+            <ion-item>
+              <ion-icon name="call" slot="end"></ion-icon>
+              <ion-input type="tel" placeholder="Telefone:" inputmode="fone" [(ngModel)]='fone'></ion-input>
+            </ion-item>
+          </ion-col> -->
+          <ion-col class="button" size="12">
+            <ion-button expand="block" type="submit">Cadastrar</ion-button>
+          </ion-col>
+        </form>
+    <!--     <ion-col size="12">
+          <p>OU</p>
+        </ion-col> -->
+      </ion-row>
+    </ng-container>
+  </div>
+
+
+</ion-content>

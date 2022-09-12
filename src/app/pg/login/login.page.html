@@ -1,0 +1,31 @@
+<ion-content class="corpo">
+
+  <ion-row>
+    <ion-buttons>
+      <ion-back-button icon="chevron-back-outline" defaultHref="/tabs/pg/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-col size="12">
+      <h1>Login</h1>
+    </ion-col>
+
+    <ion-col size="12"class="inputLogin">
+      <ion-item>
+        <ion-icon name="mail" color="primary" slot="start"></ion-icon>
+        <ion-input type="email" placeholder="Email:" autofocus="true" inputmode="email" [(ngModel)]='email'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / autofocus = mostra esse campo em ativo primeiro, em destaque / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+      </ion-item>
+    </ion-col>
+    <ion-col size="12">
+      <ion-item>
+        <ion-icon name="lock-closed" color="primary" slot="start"></ion-icon>
+        <ion-input type="password" placeholder="Senha:" inputmode="senha" [(ngModel)]='senha'></ion-input> <!--Placeholder = informa ao usuario oque deve ser inserido / inputmodel= qual o modo de dado inserido / ngModel= guardar informação inserida-->
+      </ion-item>
+    </ion-col>
+    <ion-col size="12">
+      <ion-button expand="full" (click)="Logar()">LOGIN</ion-button> <!--Criando o metodo logar em click-->
+      <a href="/tabs/pg/cadastro"><p>Não tem uma conta? Cadastre-se.</p></a>
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>
