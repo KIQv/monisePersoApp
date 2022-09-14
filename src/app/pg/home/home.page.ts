@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UrlService } from '../../servidor/url.service';
 import { map } from 'rxjs/operators';
-import { Http } from '@angular/http'; /*IMPORTADO NA PASTA @ANGULAR */
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ import { Http } from '@angular/http'; /*IMPORTADO NA PASTA @ANGULAR */
 export class HomePage implements OnInit {
 
   produtos:any;
-  constructor(public servidorUrl: UrlService, public http: Http) { /* HTTP papel principal = TRABALHAR COM URL */ 
+  constructor(public servidorUrl: UrlService, public http: HttpClient) { /* HTTP papel principal = TRABALHAR COM URL */ 
     
   this.listaProduto();
 
@@ -40,10 +40,8 @@ export class HomePage implements OnInit {
 
   listaProduto(){
     // Buscar os serviços
-    this.http.get(this.servidorUrl.pegarUrl() + 'home-produto.php').pipe(map(res => res.json())).subscribe(listaDados => {
+    this.http.get(this.servidorUrl.pegarUrl() + 'home-produto.php').pipe(map(res => res)).subscribe(listaDados => {
       this.produtos = listaDados;
     })
-
   }
-
 }
