@@ -40,6 +40,10 @@ const routes: Routes = [
   {
     path: 'detalhe',
     loadChildren: () => import('./pg/detalhe/detalhe.module').then( m => m.DetalhePageModule)
+  },
+  {
+    path: 'pedido',
+    loadChildren: () => import('./pg/pedido/pedido.module').then( m => m.PedidoPageModule)
   }
 
 ];
