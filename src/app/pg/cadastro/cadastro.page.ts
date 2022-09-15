@@ -30,8 +30,8 @@ export class CadastroPage implements OnInit {
     public nav: NavController,
     public formConst: FormBuilder) { 
 
-      this.email = "ju.sa@gmail.com";
-      this.senha = "1234";
+      /* this.email = "ju.sa@gmail.com";
+      this.senha = "1234"; */
 
       this.cadastro = this.formConst.group({
         nome: ['', Validators.required],
