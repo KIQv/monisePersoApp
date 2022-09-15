@@ -36,22 +36,22 @@
   <ion-row class="categorias">
     <ion-col size="2">
       <a href="#">
-        <ion-img src="../../../assets/categoria01.png" alt="Categoria 01"></ion-img>
+        <ion-img src="../../../assets/icon/iconCake.svg" alt="Categoria 01"></ion-img>
       </a>
     </ion-col>
     <ion-col size="2">
       <a href="#">
-        <ion-img src="../../../assets/categoria01.png" alt="Categoria 02"></ion-img>
+        <ion-img src="../../../assets/icon/iconCake.svg" alt="Categoria 02"></ion-img>
       </a>
     </ion-col>
     <ion-col size="2">
       <a href="#">
-        <ion-img src="../../../assets/categoria01.png" alt="Categoria 03"></ion-img>
+        <ion-img src="../../../assets/icon/iconCake.svg" alt="Categoria 03"></ion-img>
       </a>
     </ion-col>
     <ion-col size="2">
       <a href="#">
-        <ion-img src="../../../assets/categoria01.png" alt="Categoria 04"></ion-img>
+        <ion-img src="../../../assets/icon/iconCake.svg" alt="Categoria 04"></ion-img>
       </a>
     </ion-col> 
   </ion-row>
@@ -59,7 +59,7 @@
   <ion-row class="conteudo01">
     <ion-col>
       <ion-text>
-        <h2>Titulo</h2>
+        <h2>Artigos</h2>
       </ion-text>
     </ion-col>
     <ion-col>
@@ -75,21 +75,21 @@
     <ion-card>
       <img src="../../../assets/card01.png" />
       <ion-card-header>
-        <ion-card-subtitle>Lorem Ipsum</ion-card-subtitle>
-        <ion-card-title color="primary">Lorem Ipsum</ion-card-title>
+        <ion-card-subtitle>Curiosidades</ion-card-subtitle>
+        <ion-card-title color="primary">10 Curiosidades Sobre Doces De Festa Que Você Não Sabia</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quam! Exercitationem at est necessitatibus recusandae.
+        Sim, esses docinhos escondem segredos, mas não se assuste! Não é nada que vai te fazer mudar de ideia sobre o quanto eles são deliciosos. Mas agora, chega de enrolação, vamos conferir!
       </ion-card-content>
     </ion-card>
     <ion-card>
       <img src="../../../assets/card02.png" />
       <ion-card-header>
-        <ion-card-subtitle>Lorem Ipsum</ion-card-subtitle>
-        <ion-card-title color="primary">Lorem Ipsum</ion-card-title>
+        <ion-card-subtitle>Curiosidades</ion-card-subtitle>
+        <ion-card-title color="primary">A Historia do Bolo</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quam! Exercitationem at est necessitatibus recusandae.
+        O bolo surgiu no Egito Antigo e era feito a partir de pães adoçados com xaropes de frutas, tâmaras e passas. No período renascentista a receita foi melhorada pelos romanos, que conheciam a técnica da fermentação. Foram eles que colocaram o nome bolo, por causa do formato redondo, vindo de bola.
       </ion-card-content>
     </ion-card>
   </ion-row>
@@ -103,7 +103,7 @@
   <ion-row>
     <ion-slides pager="false" [options]="slideProduto" class="ion-margin">
       <ion-slide *ngFor="let produto of produtos">
-        <ion-card>
+        <ion-card class="cardDestaque">
           <img src="{{ this.servidorUrl.pegarUrl() + this.produto.fotoProduto1 }}">
           <ion-card-header>
             <ion-card-subtitle>Destaques</ion-card-subtitle>

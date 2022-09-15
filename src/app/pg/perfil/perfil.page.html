@@ -1,21 +1,26 @@
 <ion-content>
 
-  <ion-img class="logo" src="{{ this.servidorUrl.pegarUrl() + this.servidorUrl.getFotoCliente() }}" alt="Foto usuario"></ion-img>
+  <ion-avatar>
+    <img src="{{ this.servidorUrl.pegarUrl() + this.servidorUrl.getFotoCliente() }}" alt="{{ this.servidorUrl.getNomeCliente() }}">
+  </ion-avatar>
 
   <ion-title>{{ this.servidorUrl.getNomeCliente() }}</ion-title>
 
   <ion-list>
     <ion-item>
-      <ion-label>Email: {{ this.servidorUrl.getEmailCliente() }}</ion-label>
+      <ion-label>E-mail: {{ this.servidorUrl.getEmailCliente() }}</ion-label>
     </ion-item>
     <ion-item>
       <ion-label>Data de cadastro: {{ this.servidorUrl.getDataCadCliente() }}</ion-label>
     </ion-item>
   </ion-list>
 
-  <ion-button id="button1" expand="block" (click)="sair()">Editar perfil</ion-button>
+  <ion-row>
+    <ion-button id="button1" expand="block" (click)="sair()">Editar perfil</ion-button>
 
-  <ion-button id="button2" expand="block" (click)="sair()">sair</ion-button>
+    <ion-button id="button2" expand="block" (click)="sair()">Sair</ion-button>
+  </ion-row>
+
 
   <ion-fab horizontal="start" vertical="bottom" slot="fixed">
     <ion-fab-button color="primary">
