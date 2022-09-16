@@ -58,9 +58,22 @@
 .categorias ion-col{
     margin: auto;
     background: transparent;
-    /* box-shadow: 0px 4px 4px rgb(0 0 0 / 25%); */
     border: 1px solid #DADADA;
     border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        ion-img{
+            width: 31px;
+            height: 31px;
+            img{
+                width: 31px;
+                height: 31px;
+            }
+        }
+    }
 }
 
 .conteudo01{
