@@ -6,7 +6,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class UrlService {
   
-  url:string = "https://monisepersonalizados.000webhostapp.com/admin/";
+  url:string = "https://monisepersonalizados.online/admin/";
 
   idCliente: any;
   nome: any;
